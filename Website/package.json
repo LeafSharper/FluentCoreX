@@ -1,0 +1,17 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "css:build": "npx @tailwindcss/cli -i ./input.css -o ./wwwroot/FluentCore.css",
+    "css:watch": "npx @tailwindcss/cli -i ./input.css -o ./wwwroot/FluentCore.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.7",
+    "tailwindcss": "^4.1.7"
+  }
+}
