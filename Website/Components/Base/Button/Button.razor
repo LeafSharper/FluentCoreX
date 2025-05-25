@@ -11,13 +11,13 @@
     [Parameter]
     public ButtonSize Size { get; set; } = ButtonSize.Medium;
 
-    public string ButtonBaseCls = "ease-in-out duration-100 transition-colors font-medium font-noto";
+    public string ButtonBaseCls = "font-noto btn";
 
-    public string AccessibilityCls = "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 cursor-pointer";
+    public string AccessibilityCls = "";
 
     public string VariantCls => Variant switch
     {
-        ButtonVariant.Primary => "bg-emerald-600 text-white hover:bg-emerald-700 active:bg-emerald-800 border border-transparent rounded-md",
+        ButtonVariant.Primary => "btn-primary",
         ButtonVariant.Outline => "",
         _ => "bg-white text-gray-900 hover:bg-gray-50 active:bg-gray-100 border border-gray-400 rounded-md" // Secondary
     };
@@ -26,7 +26,7 @@
     {
         ButtonSize.Small => "",
         ButtonSize.Large => "",
-        _ => "text-sm px-4 py-2" // Medium
+        _ => "btn-md" // Medium
     };
 
     public string CssCls => string.Join(" ", new[] { ButtonBaseCls, SizeCls, VariantCls, AccessibilityCls });
