@@ -1,4 +1,4 @@
-﻿<button role="button" tabindex="0" class="@CssCls">@ChildContent</button>
+﻿<button role="button" tabindex="0" class="btn @CssCls">@ChildContent</button>
 
 @code {
 
@@ -11,15 +11,11 @@
     [Parameter]
     public ButtonSize Size { get; set; } = ButtonSize.Medium;
 
-    public string ButtonBaseCls = "font-noto btn";
-
-    public string AccessibilityCls = "";
-
     public string VariantCls => Variant switch
     {
         ButtonVariant.Primary => "btn-primary",
         ButtonVariant.Outline => "",
-        _ => "bg-white text-gray-900 hover:bg-gray-50 active:bg-gray-100 border border-gray-400 rounded-md" // Secondary
+        _ => "btn-secondary"
     };
 
     public string SizeCls => Size switch
@@ -29,7 +25,7 @@
         _ => "btn-md" // Medium
     };
 
-    public string CssCls => string.Join(" ", new[] { ButtonBaseCls, SizeCls, VariantCls, AccessibilityCls });
+    public string CssCls => string.Join(" ", new[] { SizeCls, VariantCls });
 
     public enum ButtonVariant
     {

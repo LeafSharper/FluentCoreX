@@ -5,33 +5,51 @@
     cursor: pointer;
     transition: background-color 150ms ease-in-out;
     border-radius: var(--border-radius-md);
-    font-weight: 600;
+    font-weight: 500;
+    font-family: "Noto Sans", sans-serif;
 }
 
-.btn:focus {
-    outline: unset;
-}
+    .btn:focus {
+        outline: none;
+    }
 
-.btn:focus-visible {
-    
-}
+    .btn:focus-visible {
+        outline: 2px solid var(--brand-background);
+        outline-offset: 1px;
+    }
 
 .btn-md {
     font-size: 14px;
     line-height: 20px;
     min-width: 96px;
-    padding: 5px 12px;
+    padding: 5px 14px;
 }
 
 .btn-primary {
     background-color: var(--brand-background);
     color: var(--brand-foreground);
+    border-color: transparent;
 }
 
-.btn-primary:hover {
-    background-color: var(--brand-background-hover);
+    .btn-primary:hover {
+        background-color: var(--brand-background-hover);
+    }
+
+    .btn-primary:active {
+        background-color: var(--brand-background-pressed);
+    }
+
+.btn-secondary {
+    background-color: var(--neutral-background);
+    color: var(--neutral-foreground);
+    border: 1px solid var(--stroke-neutral);
 }
 
-.btn-primary:active {
-    background-color: var(--brand-background-pressed);
-}
+    .btn-secondary:hover {
+        background-color: var(--neutral-background-hover);
+    }
+
+    .btn-secondary:active {
+        background-color: var(--neutral-background-pressed);
+        border: 1px solid var(--stroke-neutral-pressed);
+    }
