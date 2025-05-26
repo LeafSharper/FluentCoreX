@@ -11,13 +11,13 @@
     [Parameter]
     public ButtonSize Size { get; set; } = ButtonSize.Medium;
 
-    public string AccessibilityCls = "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 cursor-pointer";
+    public string AccessibilityCls = "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500";
 
     public string VariantCls => Variant switch
     {
         ButtonVariant.Primary => "btn-primary",
         ButtonVariant.Outline => "",
-        _ => "bg-white text-gray-900 hover:bg-neutral-100 active:bg-neutral-200 border border-neutral-400 rounded-md" // Secondary
+        _ => "btn-secondary" // Secondary
     };
 
     public string SizeCls => Size switch
