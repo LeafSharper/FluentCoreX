@@ -3,4 +3,56 @@
 @theme {
     --font-inter: "Inter", sans-serif;
     --font-noto: "Noto Sans", sans-serif;
+
+    --color-primary-50: oklch(0.969 0.016 293.756);
+    --color-primary-100: oklch(0.943 0.029 294.588);
+    --color-primary-200: oklch(0.894 0.057 293.283);
+    --color-primary-300: oklch(0.811 0.111 293.571);
+    --color-primary-400: oklch(0.702 0.183 293.541);
+    --color-primary-500: oklch(0.606 0.25 292.717);
+    --color-primary-600: oklch(0.541 0.281 293.009);
+    --color-primary-700: oklch(0.491 0.27 292.581);
+    --color-primary-800: oklch(0.432 0.232 292.759);
+    --color-primary-900: oklch(0.38 0.189 293.745);
+    --color-primary-950: oklch(0.283 0.141 291.089);
+
+    --color-neutral-0: #fff;
+    --color-neutral-50: oklch(0.985 0.002 247.839);
+    --color-neutral-100: oklch(0.967 0.003 264.542);
+    --color-neutral-200: oklch(0.928 0.006 264.531);
+    --color-neutral-300: oklch(0.872 0.01 258.338);
+    --color-neutral-400: oklch(0.707 0.022 261.325);
+    --color-neutral-500: oklch(0.551 0.027 264.364);
+    --color-neutral-600: oklch(0.446 0.03 256.802);
+    --color-neutral-700: oklch(0.373 0.034 259.733);
+    --color-neutral-800: oklch(0.278 0.033 256.848);
+    --color-neutral-900: oklch(0.21 0.034 264.665);
+    --color-neutral-950: oklch(0.13 0.028 261.692);
+}
+
+@layer components {
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: var(--font-weight-semibold);
+        cursor: pointer;
+        transition: all 150ms var(--ease-in-out);
+        font-family: var(--font-noto);
+    }
+
+    .btn-primary {
+        color: var(--color-white);
+        background-color: var(--color-primary-600);
+        border: 1px solid transparent;
+        border-radius: var(--radius-sm);
+
+        &:hover {
+            background-color: var(--color-primary-700);
+        }
+
+        &:active {
+            background-color: var(--color-primary-800);
+        }
+    }
 }
