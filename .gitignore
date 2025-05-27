@@ -55,3 +55,7 @@ nunit-*.xml
 
 # Js
 node_modules
+
+# Visual Studio
+.vs
+/Website/Website.csproj.user
