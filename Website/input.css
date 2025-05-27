@@ -3,7 +3,6 @@
 @theme {
     --font-inter: "Inter", sans-serif;
     --font-noto: "Noto Sans", sans-serif;
-
     --color-primary-50: oklch(0.969 0.016 293.756);
     --color-primary-100: oklch(0.943 0.029 294.588);
     --color-primary-200: oklch(0.894 0.057 293.283);
@@ -15,7 +14,6 @@
     --color-primary-800: oklch(0.432 0.232 292.759);
     --color-primary-900: oklch(0.38 0.189 293.745);
     --color-primary-950: oklch(0.283 0.141 291.089);
-
     --color-neutral-0: #fff;
     --color-neutral-50: oklch(0.985 0.002 247.839);
     --color-neutral-100: oklch(0.967 0.003 264.542);
@@ -28,7 +26,6 @@
     --color-neutral-800: oklch(0.278 0.033 256.848);
     --color-neutral-900: oklch(0.21 0.034 264.665);
     --color-neutral-950: oklch(0.13 0.028 261.692);
-
 }
 
 @layer components {
@@ -47,28 +44,28 @@
         background-color: var(--color-primary-600);
         border: 1px solid transparent;
         border-radius: var(--radius-sm);
+    }
 
-        &:hover {
+        .btn-primary:hover {
             background-color: var(--color-primary-700);
         }
 
-        &:active {
+        .btn-primary:active {
             background-color: var(--color-primary-800);
         }
-    }
 
     .btn-secondary {
         color: var(--color-neutral-900);
         background-color: var(--color-neutral-0);
         border: 1px solid var(--color-neutral-400);
         border-radius: var(--radius-sm);
+    }
 
-        &:hover {
+        .btn-secondary:hover {
             background-color: var(--color-neutral-50);
         }
 
-        &:active {
+        .btn-secondary:active {
             background-color: var(--color-primary-100);
         }
-    }
 }
