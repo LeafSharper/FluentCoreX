@@ -16,15 +16,18 @@
     public string VariantCls => Variant switch
     {
         ButtonVariant.Primary => "btn-primary",
-        ButtonVariant.Outline => "",
+        ButtonVariant.Outline => "btn-outline",
+        ButtonVariant.Ghost => "btn-ghost",
+        ButtonVariant.Icon => "btn-icon",
         _ => "btn-secondary" // Secondary
     };
 
     public string SizeCls => Size switch
     {
-        ButtonSize.Small => "",
-        ButtonSize.Large => "",
-        _ => "text-sm px-4 py-2" // Medium
+        ButtonSize.Small => "text-xs py-1 px-2 min-w-[70px]",
+        ButtonSize.Large => "text-lg py-2 px-6 min-w-[120px]",
+        ButtonSize.Icon => "text-sm p-2 rounded-full",
+        _ => "text-sm px-4 py-2 min-w-[96px]" // Medium
     };
 
     public string CssCls => string.Join(" ", new[] { SizeCls, VariantCls, AccessibilityCls });
@@ -33,7 +36,9 @@
     {
         Primary,
         Secondary,
-        Outline
+        Outline,
+        Ghost,
+        Icon
     }
 
     public enum ButtonSize
@@ -41,5 +46,6 @@
         Small,
         Medium,
         Large,
+        Icon
     }
 }

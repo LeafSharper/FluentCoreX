@@ -1,15 +1,35 @@
 ﻿@page "/docs/buttons"
 @using Website.Components.Base.Button
 
-<main class="max-w-96">
+<main class="max-w-7xl mx-auto">
     <h1 class="text-7xl font-inter font-light">Buttons</h1>
 
-    <section class="pt-20 w-full  mx-auto">
-        <div class="mx-4 p-5 rounded-lg border border-neutral-300 shadow-md">
+    <section class="pt-20">
+        <h2>Button Variants:</h2>
+        <div class=" p-5 rounded-lg border border-neutral-300 shadow-md flex gap-4">
             <Button Size="Button.ButtonSize.Medium" Variant="Button.ButtonVariant.Secondary">Secondary</Button>
-            <Button Size="Button.ButtonSize.Medium" Variant="Button.ButtonVariant.Primary">Secondary</Button>
-            <Button Size="Button.ButtonSize.Medium" Variant="Button.ButtonVariant.Outline">Secondary</Button>
+            <Button Size="Button.ButtonSize.Medium" Variant="Button.ButtonVariant.Primary">Primary</Button>
+            <Button Size="Button.ButtonSize.Medium" Variant="Button.ButtonVariant.Outline">Outline</Button>
+            <Button Size="Button.ButtonSize.Medium" Variant="Button.ButtonVariant.Ghost">Ghost</Button>
+        </div>
+    </section>
 
+    <section class="pt-20">
+        <h2>Button Sizes:</h2>
+        <div class="p-5 rounded-lg border border-neutral-300 shadow-md flex gap-4">
+            <Button Size="Button.ButtonSize.Small" Variant="Button.ButtonVariant.Secondary">Secondary</Button>
+            <Button Size="Button.ButtonSize.Medium" Variant="Button.ButtonVariant.Secondary">Secondary</Button>
+            <Button Size="Button.ButtonSize.Large" Variant="Button.ButtonVariant.Secondary">Secondary</Button>
+        </div>
+    </section>
+
+    <section class="pt-20">
+        <h2>With Icons:</h2>
+        <div class="p-5 rounded-lg border border-neutral-300 shadow-md flex gap-4">
+            <Button Size="Button.ButtonSize.Icon" Variant="Button.ButtonVariant.Secondary">Secondary</Button>
+            <Button Size="Button.ButtonSize.Icon" Variant="Button.ButtonVariant.Primary">Secondary</Button>
+            <Button Size="Button.ButtonSize.Icon" Variant="Button.ButtonVariant.Outline">Secondary</Button>
+            <Button Size="Button.ButtonSize.Icon" Variant="Button.ButtonVariant.Ghost">Secondary</Button>
         </div>
     </section>
 </main>
